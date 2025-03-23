@@ -1,59 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Katik</title>
+    <title>Katik - Kharisma</title>
     <!-- CSS External -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <!-- Header -->
-    <header>
-        <h1>Katik (Kalkulator Matematik)</h1>
+    <header class="main-header">
+        <h1>KATIK Kalkulator Matematik</h1>
     </header>
 
     <!-- Main Content -->
     <main>
-        <header>
+        <!-- Welcome Speech -->
+        <header class="header-h1">
             <h1>Welcome to Katik</h1>
         </header>
 
-        <p>Hai sobat selamat datang di Katik!</p>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+        <p class="header-p">Hai sobat selamat datang di Katik!</p>
+        <p class="header-p">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+            been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+            electronic typesetting, remaining essentially unchanged.</p>
 
         <!-- Navigasi Fitur -->
-        <div>
+        <div class="nav-fitur">
             <a href="">Persegi</a>
             <a href="">Persegi Panjang</a>
         </div>
-           
+
         <!-- Section Luas -->
-        <section>
+        <section class="section-header">
             <header>
-                <h1>Luas Persegi</h1>
+                <h1 class="header-h1">Luas Persegi</h1>
             </header>
 
             <!-- Gambar Luas -->
+            <div class="section-image"></div>
+
+            <div>
+                <p>Rumus Luas Persegi yaitu:</p>
+            </div>
+
+            <div class="section-image-luas"></div>
+
+            <div>
+                <p>Di mana:</p>
+            </div>
+
+            <div class="formula">
+                <p>L = Luas</p>
+                <p>s = sisi</p>
+            </div>
 
             <!-- Konten Perhitungan -->
-            <div></div>
+            <div class="calculate-content">
+                <div>
+                    <h1>Hitung Luas Persegi</h1>
+                    <input type="number" id="sisiLuas" class="form-control mb-3" placeholder="Nilai Sisi">
+                    <button class="btn btn-primary" onclick="hitungLuas()">Hitung</button>
+                    <button class="btn btn-warning" onclick="resetFormLuas()">Reset</button>
+                    <h3 class="mt-3" id="hasilLuas"></h3>
+                </div>
+            </div>
         </section>
 
         <!-- Section Keliling -->
-         <section>
+        <section class="section-header">
             <header>
-                <h1>Keliling Persegi</h1>
+                <h1 class="header-h1">Keliling Persegi</h1>
             </header>
 
             <!-- Gambar Keliling -->
-         </section>
+            <div class="section-image"></div>
+
+            <div>
+                <p>Rumus Keliling Persegi yaitu:</p>
+            </div>
+
+            <div class="section-image-keliling"></div>
+
+            <div>
+                <p>Di mana:</p>
+            </div>
+
+            <div class="formula">
+                <p>K = Keliling</p>
+                <p>s = sisi</p>
+            </div>
+
+            <!-- Konten Perhitungan -->
+            <div class="calculate-content">
+                <div>
+                    <h1>Hitung Keliling Persegi</h1>
+                    <input type="number" id="sisiKeliling" class="form-control mb-3" placeholder="Nilai Sisi">
+                    <button class="btn btn-primary" onclick="hitungKeliling()">Hitung</button>
+                    <button class="btn btn-warning" onclick="resetFormKeliling()">Reset</button>
+                    <h3 class="mt-3" id="hasilKeliling"></h3>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
     <footer>
-        <p>Made by Kharisma</p>
+        <p>Made by Kharisma@2025</p>
     </footer>
-    
+    <script src="js/script.js"></script>
 </body>
+
 </html>

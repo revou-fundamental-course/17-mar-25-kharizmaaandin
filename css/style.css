@@ -1,1 +1,107 @@
 /* Ini CSS External */
+body {
+    font-family: poppins;
+}
+
+.main-header>h1 {
+    margin: 0px;
+    background-color: #8D493A;
+    padding: 24px;
+    text-align: center;
+    color: antiquewhite;
+}
+
+main {
+    background-color: #F8EDE3;
+    padding: 16px;
+    text-align: center;
+}
+
+.header-h1 {
+    color:#8D493A;
+}
+
+.header-p {
+    color: #8D493A;
+}
+
+.nav-fitur {
+    display: flex;
+    flex-direction: column;
+    /* background-color: #8D493A; */
+}
+
+.nav-fitur>a {
+    color: white;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 50%;
+    align-self: center;
+}
+
+.nav-fitur a:hover {
+    background-color: #8D493A;
+}
+
+.nav-fitur a.active {
+    background-color: #8D493A; 
+}
+
+/* .nav-fitur-non-active {
+    background-color: darkcyan;
+} */
+
+.nav-fitur-active {
+    background-color: cornflowerblue;
+}
+
+.section-header {
+    background-color: #DFD3C3;
+    padding: 16px;
+}
+
+.section-image {
+    background-image: url("../assets/persegi.png");
+    width: 150px;
+    height: 150px;
+    justify-self: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.section-image-luas {
+    background-image: url("../assets/luas_persegi.png");
+    width: 150px;
+    height: 150px;
+    justify-self: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.section-image-keliling {
+    background-image: url("../assets/keliling_persegi.png");
+    width: 150px;
+    height: 150px;
+    justify-self: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.formula {
+    display: flex;
+    flex-direction: column;
+}
+
+.calculate-content {
+    border: 1px solid;
+    height: 300px;
+}
+
+section {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+footer {
+    text-align: center;
+}
