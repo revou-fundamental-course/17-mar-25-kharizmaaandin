@@ -22,12 +22,14 @@
             <h1>Welcome to Katik</h1>
         </header>
 
-        <p class="header-p">Hai sobat selamat datang di Katik!</p>
-        <p class="header-p">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-            been the
-            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged.</p>
+        <div class="calculate-image">
+            <img src="assets/calculator.png" alt="Kalkulator" style="max-width: 100px; width: 100%; height: auto;">
+        </div>
+
+        <p class="header-p">Selamat datang di Katik, sebuah aplikasi web sederhana yang dirancang untuk
+            membantu Anda menghitung luas dan keliling berbagai bangun datar dengan cepat dan mudah. Dengan antarmuka
+            yang ramah pengguna, Katik cocok digunakan oleh pelajar, mahasiswa, maupun siapa saja yang ingin melakukan
+            perhitungan matematika tanpa ribet. Mari mulai berhitung dan jadikan matematika lebih menyenangkan!</p>
 
         <!-- Navigasi Fitur -->
         <div class="nav-fitur">
@@ -35,77 +37,80 @@
             <a href="">Persegi Panjang</a>
         </div>
 
-        <!-- Section Luas -->
-        <section class="section-header">
-            <header>
-                <h1 class="header-h1">Luas Persegi</h1>
-            </header>
+        <div class="container">
+<!-- Section Luas -->
+<section class="section-header">
+    <header>
+        <h1 class="header-h1">Luas Persegi</h1>
+    </header>
 
-            <!-- Gambar Luas -->
-            <div class="section-image"></div>
+    <!-- Gambar Luas -->
+    <div class="section-image"></div>
 
-            <div>
-                <p>Rumus Luas Persegi yaitu:</p>
-            </div>
+    <div>
+        <p>Rumus Luas Persegi yaitu:</p>
+    </div>
 
-            <div class="section-image-luas"></div>
+    <div class="section-image-luas"></div>
 
-            <div>
-                <p>Di mana:</p>
-            </div>
+    <div>
+        <p>Di mana:</p>
+    </div>
 
-            <div class="formula">
-                <p>L = Luas</p>
-                <p>s = sisi</p>
-            </div>
+    <div class="formula">
+        <p>L = Luas</p>
+        <p>s = sisi</p>
+    </div>
 
-            <!-- Konten Perhitungan -->
-            <div class="calculate-content">
-                <div>
-                    <h1>Hitung Luas Persegi</h1>
-                    <input type="number" id="sisiLuas" class="form-control mb-3" placeholder="Nilai Sisi">
-                    <button class="btn btn-primary" onclick="hitungLuas()">Hitung</button>
-                    <button class="btn btn-warning" onclick="resetFormLuas()">Reset</button>
-                    <h3 class="mt-3" id="hasilLuas"></h3>
-                </div>
-            </div>
-        </section>
+    <!-- Konten Perhitungan -->
+    <div class="calculate-content">
+        <div>
+            <h1>Hitung Luas Persegi</h1>
+            <input type="number" id="sisiLuas" class="form-control mb-3" placeholder="Nilai Sisi">
+            <button class="btn btn-primary" onclick="hitungLuas()">Hitung</button>
+            <button class="btn btn-warning" onclick="resetFormLuas()">Reset</button>
+            <h3 id="hasilLuas"></h3>
+        </div>
+    </div>
+</section>
 
-        <!-- Section Keliling -->
-        <section class="section-header">
-            <header>
-                <h1 class="header-h1">Keliling Persegi</h1>
-            </header>
+<!-- Section Keliling -->
+<section class="section-header">
+    <header>
+        <h1 class="header-h1">Keliling Persegi</h1>
+    </header>
 
-            <!-- Gambar Keliling -->
-            <div class="section-image"></div>
+    <!-- Gambar Keliling -->
+    <div class="section-image"></div>
 
-            <div>
-                <p>Rumus Keliling Persegi yaitu:</p>
-            </div>
+    <div>
+        <p>Rumus Keliling Persegi yaitu:</p>
+    </div>
 
-            <div class="section-image-keliling"></div>
+    <div class="section-image-keliling"></div>
 
-            <div>
-                <p>Di mana:</p>
-            </div>
+    <div>
+        <p>Di mana:</p>
+    </div>
 
-            <div class="formula">
-                <p>K = Keliling</p>
-                <p>s = sisi</p>
-            </div>
+    <div class="formula">
+        <p>K = Keliling</p>
+        <p>s = sisi</p>
+    </div>
 
-            <!-- Konten Perhitungan -->
-            <div class="calculate-content">
-                <div>
-                    <h1>Hitung Keliling Persegi</h1>
-                    <input type="number" id="sisiKeliling" class="form-control mb-3" placeholder="Nilai Sisi">
-                    <button class="btn btn-primary" onclick="hitungKeliling()">Hitung</button>
-                    <button class="btn btn-warning" onclick="resetFormKeliling()">Reset</button>
-                    <h3 class="mt-3" id="hasilKeliling"></h3>
-                </div>
-            </div>
-        </section>
+    <!-- Konten Perhitungan -->
+    <div class="calculate-content">
+        <div>
+            <h1>Hitung Keliling Persegi</h1>
+            <input type="number" id="sisiKeliling" class="form-control mb-3" placeholder="Nilai Sisi">
+            <button class="btn btn-primary" onclick="hitungKeliling()">Hitung</button>
+            <button class="btn btn-warning" onclick="resetFormKeliling()">Reset</button>
+            <h3 id="hasilKeliling"></h3>
+        </div>
+    </div>
+</section>
+        </div>
+        
     </main>
 
     <!-- Footer -->

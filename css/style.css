@@ -5,24 +5,29 @@ body {
 
 .main-header>h1 {
     margin: 0px;
-    background-color: #8D493A;
+    background-color: darkorange;
     padding: 24px;
     text-align: center;
-    color: antiquewhite;
+    color: white;
 }
 
 main {
-    background-color: #F8EDE3;
+    background-color: white;
     padding: 16px;
     text-align: center;
 }
 
 .header-h1 {
-    color:#8D493A;
+    color: darkred;
 }
 
 .header-p {
-    color: #8D493A;
+    color: darkred;
+    margin: 0 auto;
+    max-width: 80%; /* Atur lebar maksimum kontainer teks */
+    text-align: justify;
+    margin-bottom: 50px;
+    margin-top: 30px;
 }
 
 .nav-fitur {
@@ -32,7 +37,7 @@ main {
 }
 
 .nav-fitur>a {
-    color: white;
+    color: darkorange;
     padding-top: 8px;
     padding-bottom: 8px;
     width: 50%;
@@ -40,11 +45,30 @@ main {
 }
 
 .nav-fitur a:hover {
-    background-color: #8D493A;
+    background-color: #FFB433;
+    display: block; /* Agar memenuhi lebar elemen parent */
+    width: 100%; /* Mengisi lebar elemen induk */
+    max-width: 600px; /* Sesuaikan dengan lebar teks */
+    text-align: center; /* Agar teks tetap di tengah */
+    padding: 10px 20px; /* Atur padding sesuai kebutuhan */
+    color: white; /* Warna teks */
+    border: none;
+    border-radius: 5px; /* Membuat sudut sedikit melengkung */
+    font-size: 18px;
+    cursor: pointer;
 }
 
 .nav-fitur a.active {
-    background-color: #8D493A; 
+    background-color: darkorange;
+    display: block; /* Agar memenuhi lebar elemen parent */
+    width: 100%; /* Mengisi lebar elemen induk */
+    max-width: 600px; /* Sesuaikan dengan lebar teks */
+    text-align: center; /* Agar teks tetap di tengah */
+    padding: 10px 20px; /* Atur padding sesuai kebutuhan */
+    color: white; /* Warna teks */
+    border: none;
+    border-radius: 5px; /* Membuat sudut sedikit melengkung */
+    font-size: 18px;
 }
 
 /* .nav-fitur-non-active {
@@ -56,7 +80,7 @@ main {
 }
 
 .section-header {
-    background-color: #DFD3C3;
+    background-color: #FBF8EF;
     padding: 16px;
 }
 
@@ -72,7 +96,7 @@ main {
 .section-image-luas {
     background-image: url("../assets/luas_persegi.png");
     width: 150px;
-    height: 150px;
+    height: 65px;
     justify-self: center;
     background-size: cover;
     background-position: center;
@@ -81,7 +105,7 @@ main {
 .section-image-keliling {
     background-image: url("../assets/keliling_persegi.png");
     width: 150px;
-    height: 150px;
+    height: 65px;
     justify-self: center;
     background-size: cover;
     background-position: center;
@@ -95,6 +119,68 @@ main {
 .calculate-content {
     border: 1px solid;
     height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.calculate-content img {
+    max-width: 200px; /* Atur ukuran maksimum */
+    width: 100%; /* Gambar tetap responsif */
+    height: auto; /* Menjaga aspek rasio */
+}
+
+.calculate-content h1 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: darkred;
+}
+
+.calculate-content input {
+    width: 94%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.calculate-content button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+.calculate-content button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.btn-primary {
+    background-color: cornflowerblue;
+}
+
+.btn-warning {
+    background-color: darkorange;
+}
+
+.calculate-content h3 {
+    margin-top: 10px;
+    font-size: 15px;
+    color: #333;
+    text-align: left;
+    font-weight: normal;
 }
 
 section {
@@ -102,6 +188,37 @@ section {
     margin-bottom: 16px;
 }
 
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px; /* Jarak antar section */
+    flex-wrap: wrap; /* Agar otomatis turun ke bawah di layar kecil */
+}
+
+.section {
+    width: 45%; /* Lebar saat di layar besar */
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+/* Responsif: jika layar lebih kecil dari 768px (tablet & HP) */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Mengubah menjadi atas-bawah */
+        align-items: center; /* Pusatkan elemen */
+    }
+
+    .section {
+        width: 90%; /* Lebar penuh di HP */
+    }
+}
+
 footer {
     text-align: center;
+    background-color: darkorange;
+    color: white;
 }
+
