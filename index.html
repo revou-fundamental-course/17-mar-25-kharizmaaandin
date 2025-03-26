@@ -1,123 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Katik - Kharisma</title>
-    <!-- CSS External -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/calculator.png" type="image/png"> 
 </head>
-
 <body>
-    <!-- Header -->
+    <!-- Header utama dengan judul aplikasi -->
     <header class="main-header">
-        <h1>KATIK Kalkulator Matematik</h1>
+        <h1>KATIK</h1>
     </header>
 
-    <!-- Main Content -->
     <main>
-        <!-- Welcome Speech -->
+        <!-- Judul utama halaman -->
         <header class="header-h1">
             <h1>Welcome to Katik</h1>
         </header>
 
+        <!-- Gambar kalkulator sebagai ikon utama -->
         <div class="calculate-image">
-            <img src="assets/calculator.png" alt="Kalkulator" style="max-width: 100px; width: 100%; height: auto;">
+            <img src="assets/calculator.png" alt="Kalkulator">
         </div>
 
-        <p class="header-p">Selamat datang di Katik, sebuah aplikasi web sederhana yang dirancang untuk
-            membantu Anda menghitung luas dan keliling berbagai bangun datar dengan cepat dan mudah. Dengan antarmuka
-            yang ramah pengguna, Katik cocok digunakan oleh pelajar, mahasiswa, maupun siapa saja yang ingin melakukan
-            perhitungan matematika tanpa ribet. Mari mulai berhitung dan jadikan matematika lebih menyenangkan!</p>
+        <!-- Deskripsi singkat tentang aplikasi -->
+        <p class="header-p">
+            Selamat datang di Katik, sebuah aplikasi web sederhana yang dirancang untuk membantu Anda menghitung luas dan keliling berbagai bangun datar dengan cepat dan mudah.
+        </p>
 
-        <!-- Navigasi Fitur -->
+        <!-- Navigasi fitur untuk memilih bentuk geometris -->
         <div class="nav-fitur">
-            <a href="">Persegi</a>
-            <a href="">Persegi Panjang</a>
+            <a href="#" class="btn-nav" onclick="tampilkanKonten('persegi')">Persegi</a>
+            <a href="#" class="btn-nav" onclick="tampilkanKonten('persegiPanjang')">Persegi Panjang</a>
         </div>
 
-        <div class="container">
-<!-- Section Luas -->
-<section class="section-header">
-    <header>
-        <h1 class="header-h1">Luas Persegi</h1>
-    </header>
+        <!-- Kontainer untuk perhitungan Persegi -->
+        <div id="persegi" class="container">
+            <!-- Perhitungan Luas Persegi -->
+            <section class="section-header">
+                <header>
+                    <h1 class="header-h1">Luas Persegi</h1>
+                </header>
+                <div class="section-image-persegi"></div>
+                <p>Rumus: <strong>L = s × s</strong></p>
+                <input type="number" id="sisiLuas" class="form-control" placeholder="Masukkan panjang sisi (cm)">
+                <button class="btn btn-primary" onclick="hitungLuas()">Hitung</button>
+                <button class="btn btn-warning" onclick="resetFormLuas()">Reset</button>
+                <h3 id="hasilLuas"></h3>
+            </section>
 
-    <!-- Gambar Luas -->
-    <div class="section-image"></div>
-
-    <div>
-        <p>Rumus Luas Persegi yaitu:</p>
-    </div>
-
-    <div class="section-image-luas"></div>
-
-    <div>
-        <p>Di mana:</p>
-    </div>
-
-    <div class="formula">
-        <p>L = Luas</p>
-        <p>s = sisi</p>
-    </div>
-
-    <!-- Konten Perhitungan -->
-    <div class="calculate-content">
-        <div>
-            <h1>Hitung Luas Persegi</h1>
-            <input type="number" id="sisiLuas" class="form-control mb-3" placeholder="Nilai Sisi">
-            <button class="btn btn-primary" onclick="hitungLuas()">Hitung</button>
-            <button class="btn btn-warning" onclick="resetFormLuas()">Reset</button>
-            <h3 id="hasilLuas"></h3>
+            <!-- Perhitungan Keliling Persegi -->
+            <section class="section-header">
+                <header>
+                    <h1 class="header-h1">Keliling Persegi</h1>
+                </header>
+                <div class="section-image-persegi"></div>
+                <p>Rumus: <strong>K = 4 × s</strong></p>
+                <input type="number" id="sisiKeliling" class="form-control" placeholder="Masukkan panjang sisi (cm)">
+                <button class="btn btn-primary" onclick="hitungKeliling()">Hitung</button>
+                <button class="btn btn-warning" onclick="resetFormKeliling()">Reset</button>
+                <h3 id="hasilKeliling"></h3>
+            </section>
         </div>
-    </div>
-</section>
 
-<!-- Section Keliling -->
-<section class="section-header">
-    <header>
-        <h1 class="header-h1">Keliling Persegi</h1>
-    </header>
+        <!-- Kontainer untuk perhitungan Persegi Panjang -->
+        <div id="persegiPanjang" class="container">
+            <!-- Perhitungan Luas Persegi Panjang -->
+            <section class="section-header">
+                <header>
+                    <h1 class="header-h1">Luas Persegi Panjang</h1>
+                </header>
+                <div class="section-image-persegiPanjang"></div>
+                <p>Rumus: <strong>L = p × l</strong></p>
+                <input type="number" id="panjangLuas" class="form-control" placeholder="Masukkan panjang (cm)">
+                <input type="number" id="lebarLuas" class="form-control" placeholder="Masukkan lebar (cm)">
+                <button class="btn btn-primary" onclick="hitungLuasPersegiPanjang()">Hitung</button>
+                <button class="btn btn-warning" onclick="resetFormLuasPersegiPanjang()">Reset</button>
+                <h3 id="hasilLuasPersegiPanjang"></h3>
+            </section>
 
-    <!-- Gambar Keliling -->
-    <div class="section-image"></div>
-
-    <div>
-        <p>Rumus Keliling Persegi yaitu:</p>
-    </div>
-
-    <div class="section-image-keliling"></div>
-
-    <div>
-        <p>Di mana:</p>
-    </div>
-
-    <div class="formula">
-        <p>K = Keliling</p>
-        <p>s = sisi</p>
-    </div>
-
-    <!-- Konten Perhitungan -->
-    <div class="calculate-content">
-        <div>
-            <h1>Hitung Keliling Persegi</h1>
-            <input type="number" id="sisiKeliling" class="form-control mb-3" placeholder="Nilai Sisi">
-            <button class="btn btn-primary" onclick="hitungKeliling()">Hitung</button>
-            <button class="btn btn-warning" onclick="resetFormKeliling()">Reset</button>
-            <h3 id="hasilKeliling"></h3>
+            <!-- Perhitungan Keliling Persegi Panjang -->
+            <section class="section-header">
+                <header>
+                    <h1 class="header-h1">Keliling Persegi Panjang</h1>
+                </header>
+                <div class="section-image-persegiPanjang"></div>
+                <p>Rumus: <strong>K = 2 × (p + l)</strong></p>
+                <input type="number" id="panjangKeliling" class="form-control" placeholder="Masukkan panjang (cm)">
+                <input type="number" id="lebarKeliling" class="form-control" placeholder="Masukkan lebar (cm)">
+                <button class="btn btn-primary" onclick="hitungKelilingPersegiPanjang()">Hitung</button>
+                <button class="btn btn-warning" onclick="resetFormKelilingPersegiPanjang()">Reset</button>
+                <h3 id="hasilKelilingPersegiPanjang"></h3>
+            </section>
         </div>
-    </div>
-</section>
-        </div>
-        
     </main>
 
     <!-- Footer -->
     <footer>
         <p>Made by Kharisma@2025</p>
     </footer>
+    
+    <!-- External JavaScript -->
     <script src="js/script.js"></script>
 </body>
-
 </html>
